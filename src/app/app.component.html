@@ -1,0 +1,14 @@
+<ul class="list-group" *ngIf="employees$ | async as employees">
+
+  <li class="list-group-item" *ngFor="let employee of employees">
+    
+    <ol *ngFor="let s of employee.para">
+    <li *ngIf="s.length>1" >
+      <p >{{s}}[{{s.length}}]</p>
+    </li>
+  </ol>
+  
+</li>
+</ul>
+<!--  -->
+<ng-template #elseBlock>No greeting, Lagbaja nothing for you.</ng-template>
